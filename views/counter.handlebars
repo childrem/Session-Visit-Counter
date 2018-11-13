@@ -4,7 +4,7 @@
 
 <script>
   document.getElementById("resetButton").addEventListener("click", function resetCounter() {
-    var req = XMLHTTPRequest();
+    var req = new XMLHTTPRequest();
     req.open("POST", http://flip2.engr.oregonstate.edu:9845/count, false);
     req.send({command : "resetCount"});
     });
