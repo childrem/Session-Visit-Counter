@@ -3,10 +3,10 @@
 <button id="resetButton" onclick="resetCounter">Reset Counter</button>
 
 <script>
-  function resetCounter() {
+  document.getElementById("resetButton").addEventListener("click", function resetCounter() {
     var req = XMLHTTPRequest();
     req.open("POST", http://flip2.engr.oregonstate.edu:9845/count, false);
     req.send({command : "resetCount"});
-  };
+    });
 
 </script>
