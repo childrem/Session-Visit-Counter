@@ -1,7 +1,10 @@
 <h1>You have visited this page {{count}} times!</h1>
 
-<button id="resetButton" onclick="resetCounter">Reset Counter</button>
+<form action="/count" method="post">
+  <input type="submit" name="command" value="resetCount">
+</form>
 
+/*
 <script>
   
   document.addEventListener('DOMContentLoaded', bindButtons);
@@ -15,3 +18,4 @@
   }
 
 </script>
+*/
