@@ -11,7 +11,7 @@ app.use(session({secret:'SuperSecretPassword'}));
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 9730);
+app.set('port', 9845);
 
 
 app.get('/count', function(req,res){
