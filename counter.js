@@ -21,6 +21,15 @@ app.get('/count', function(req,res){
   res.render('counter', context);
 });
 
+app.post('/count', function(req,res){
+  var context = {};
+  if (req.body.command === "resetCount") {
+    req.session.count = 0;
+  }
+  context.count = req.session.count || 0;
+  req.session.count = context.count + 1;
+  res.render('counter', context); 
+});
 
 app.use(function(req,res){
   res.status(404);
