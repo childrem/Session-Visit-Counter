@@ -1,1 +1,12 @@
 <h1>You have visited this page {{count}} times!</h1>
+
+<button id="resetButton" onclick="resetCounter">Reset Counter</button>
+
+<script>
+  function resetCounter() {
+    var req = XMLHTTPRequest();
+    req.open("POST", http://flip2.engr.oregonstate.edu:9845/count, false);
+    req.send({command : "resetCount"});
+  };
+
+</script>
